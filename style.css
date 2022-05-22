@@ -1,0 +1,64 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#input-wrap {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#label-hint {
+  position: absolute;
+  top: -25px;
+  left: 5px;
+  font-size: 16px;
+  color: #000;
+  transition: all 0.25s ease;
+}
+
+#answer {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  padding: 16px;
+  border: solid;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+}
+
+.input-change {
+  animation: input-out 2s ease-in, input-in 2s ease-out 2s;
+}
+
+@keyframes input-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes input-in {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
