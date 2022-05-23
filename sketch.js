@@ -54,7 +54,12 @@ function draw() {
     stalkerArufa += (80 - stalkerArufa) * stalkerEasing * 4; //背景もかえるとなんかださい
 
     //「てんさい」正誤判定
-    if (mouseX <= width / 4 && mouseY >= height / 2) {
+    if (
+      mouseX <= width / 4 &&
+      mouseX > 0 &&
+      mouseY >= height / 2 &&
+      mouseY < height
+    ) {
       if (
         answer.value == "てんさい" ||
         answer.value == "テンサイ" ||
